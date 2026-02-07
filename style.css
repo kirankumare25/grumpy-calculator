@@ -1,0 +1,98 @@
+/* Import a retro-style serif font */
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;700&family=Public+Sans:wght@300;600&display=swap');
+
+body {
+    background-color: #f4ebd0; /* Warm Cream */
+    color: #16302b;           /* Deep Forest Green */
+    font-family: 'Public Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Crimson Pro', serif;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #d46a3d; /* Burnt Orange */
+}
+
+p {
+    margin-bottom: 2rem;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+/* The Input Field */
+#calarea {
+    background-color: #fffcf2;
+    border: 2px solid #16302b;
+    border-radius: 4px;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    width: 300px;
+    outline: none;
+    box-shadow: 4px 4px 0px #16302b; /* Retro hard shadow */
+    transition: all 0.2s ease;
+}
+
+#calarea:focus {
+    box-shadow: 2px 2px 0px #16302b;
+    transform: translate(2px, 2px);
+}
+
+/* The Button */
+button {
+    background-color: #778a35; /* Sage Green */
+    color: white;
+    border: 2px solid #16302b;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    box-shadow: 4px 4px 0px #16302b;
+    transition: all 0.1s ease;
+}
+
+button:hover {
+    background-color: #5d6d2a;
+}
+
+button:active {
+    box-shadow: 0px 0px 0px #16302b;
+    transform: translate(4px, 4px);
+}
+
+/* Results Section */
+#result {
+    margin-top: 40px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: 'Crimson Pro', serif;
+}
+
+#roast {
+    max-width: 400px;
+    margin-top: 10px;
+    padding: 20px;
+    border-top: 1px solid #16302b;
+    font-family: 'Crimson Pro', serif;
+    font-size: 1.2rem;
+    line-height: 1.4;
+    color: #000000;
+}
+
+/* Subtle texture overlay for that retro paper feel */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/pinstriped-suit.png');
+    opacity: 0.05;
+    pointer-events: none;
+}
