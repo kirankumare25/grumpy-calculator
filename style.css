@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;700&family=Public+Sans:wght@300;600&display=swap');
 
 body {
-    background-color: rgb(194, 27, 27); /*#f4ebd0; /* Warm Cream */
+    background-color:#f4ebd0; /* Warm Cream */
     color: #16302b;           /* Deep Forest Green */
     font-family: 'Public Sans', sans-serif;
     display: flex;
