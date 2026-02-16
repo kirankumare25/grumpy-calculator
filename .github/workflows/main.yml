@@ -12,6 +12,7 @@ jobs:
           server_address: smtp.gmail.com
           server_port: 465
           username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
           
           subject: New Push to ${{ github.repository }}
           to: kiranendarapu@gmail.com
