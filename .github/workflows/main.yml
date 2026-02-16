@@ -1,0 +1,23 @@
+name: Email on Push
+on: [push]
+
+jobs:
+  send-email:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send mail
+        uses: dawidd6/action-send-mail@v3
+        with:
+          # Connection settings (Example using Gmail)
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          
+          subject: New Push to ${{ github.repository }}
+          to: kiranendarapu@gmail.com
+          from: GitHub Actions Bot
+          body: |
+            A new push was made by ${{ github.actor }}.
+            Commit message: ${{ github.event.head_commit.message }}
+            See changes: ${{ github.event.head_commit.url }}
